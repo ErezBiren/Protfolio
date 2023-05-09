@@ -1,5 +1,7 @@
 :root {
-  --secondColor: crimson;
+  --secondColor: #dc143c;
+  --stackColor:#61DBFB;
+  --heroColor:white;
 }
 
 @import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
@@ -87,7 +89,7 @@ p {
 }
 #header .header {
   min-height: 8vh;
-  background-color: rgba(31, 30, 30, 0.24);
+  background-color: rgba(31, 30, 30, 0.5);
   transition: 0.3s ease background-color;
 }
 #header .nav-bar {
@@ -205,24 +207,18 @@ p {
 
 /* Hero Section */
 #hero {
-  background-image: url(./img/hero-bg4.jpeg);
-  /* background-image: url(https://images.pexels.com/photos/51415/pexels-photo-51415.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); */
+  background-image: url(./img/office.jpg);
   background-size: cover;
   background-position: top center;
   position: relative;
   z-index: 1;
 }
-/* #hero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.4;
-  z-index: -1;
-} */
+
+#hero .card {
+  background-color: rgba(31, 30, 30, 0.5);
+  padding: 20px;
+}
+
 #hero .hero {
   max-width: 1200px;
   margin: 0 auto;
@@ -270,26 +266,26 @@ p {
 
 /* End Hero Section */
 
-/* Services Section */
-#services .services {
+/* skills Section */
+#skills .skills {
   flex-direction: column;
   text-align: center;
   max-width: 1500px;
   margin: 0 auto;
   padding: 100px 0;
 }
-#services .service-top {
+#skills .skill-top {
   max-width: 500px;
   margin: 0 auto;
 }
-#services .service-bottom {
+#skills .skill-bottom {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 50px;
 }
-#services .service-item {
+#skills .skill-item {
   flex-basis: 80%;
   display: flex;
   align-items: flex-start;
@@ -304,7 +300,7 @@ p {
   z-index: 1;
   overflow: hidden;
 }
-#services .service-item::after {
+#skills .skill-item::after {
   content: "";
   position: absolute;
   left: 0;
@@ -315,22 +311,22 @@ p {
   opacity: 0.9;
   z-index: -1;
 }
-#services .service-bottom .icon {
+#skills .skill-bottom .icon {
   height: 80px;
   width: 80px;
   margin-bottom: 20px;
 }
-#services .service-item h2 {
+#skills .skill-item h2 {
   font-size: 2rem;
   color: white;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
-#services .service-item p {
+#skills .skill-item p {
   color: white;
   text-align: left;
 }
-/* End Services Section */
+/* End skills Section */
 
 /* Projects section */
 #projects .projects {
@@ -377,6 +373,9 @@ p {
   font-size: 1.8rem;
   font-weight: 500;
   margin-top: 10px;
+}
+#projects .project-info h2 span{
+  color: var(--stackColor);
 }
 #projects .project-info p {
   color: white;
@@ -566,16 +565,17 @@ a {
   100% {
     width: 0;
     left: 100%;
+    color: var(--heroColor);
   }
 }
 @keyframes text_reveal {
   100% {
-    color: rgba(41, 50, 60, 0.4);
+    color: var(--heroColor);
   }
 }
 @keyframes text_reveal_name {
   100% {
-    color: rgba(41, 50, 60, 0.4);
+    color: var(--heroColor);
     font-weight: 500;
   }
 }
@@ -597,12 +597,12 @@ a {
   }
   /* End Hero */
 
-  /* Services Section */
-  #services .service-bottom .service-item {
+  /* skills Section */
+  #skills .skill-bottom .skill-item {
     flex-basis: 45%;
     margin: 2.5%;
   }
-  /* End Services Section */
+  /* End skills Section */
 
   /* Project */
   #projects .project-item {
@@ -722,7 +722,7 @@ a {
   }
   /* End header */
 
-  #services .service-bottom .service-item {
+  #skills .skill-bottom .skill-item {
     flex-basis: 22%;
     margin: 1.5%;
   }
