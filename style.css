@@ -284,22 +284,19 @@ p {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 50px;
+  gap:2rem;
 }
 #skills .skill-bottom .icon {
   height: 80px;
   width: 80px;
   margin-bottom: 20px;
 }
-#skills .skill-item h2 {
-  font-size: 2rem;
-  color: white;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+
+#skills .skill-bottom img{
+  width: 8rem;
+  height: 8rem;
 }
-#skills .skill-item p {
-  color: white;
-  text-align: left;
-}
+
 /* End skills Section */
 
 /* Projects section */
@@ -577,10 +574,11 @@ a {
   /* End Hero */
 
   /* skills Section */
-  #skills .skill-bottom .skill-item {
-    flex-basis: 45%;
-    margin: 2.5%;
+  #skills .skill-bottom img{
+    width: 10rem;
+    height: 10rem;
   }
+
   /* End skills Section */
 
   /* Project */
@@ -701,8 +699,7 @@ a {
   }
   /* End header */
 
-  #skills .skill-bottom .skill-item {
-    flex-basis: 22%;
-    margin: 1.5%;
+  #skills .skill-bottom{
+    margin: 20%;
   }
 }
