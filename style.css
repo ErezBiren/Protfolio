@@ -70,7 +70,7 @@ p {
   background-color: var(--secondColor);
 }
 .brand h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
   color: white;
 }
@@ -559,6 +559,11 @@ a {
 
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
+
+  .brand h1 {
+    font-size: 3rem;
+  }
+
   .cta {
     font-size: 2.5rem;
     padding: 20px 60px;
